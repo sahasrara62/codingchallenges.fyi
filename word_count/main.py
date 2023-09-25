@@ -58,10 +58,10 @@ def word_count(files, count_lines, count_words, count_characters, count_bytes):
         filename = file
         if file == "-":
             data = sys.stdin.buffer
-            result = extract_data(data=data)
+            result = extract_data(file_data=data)
         else:
             with open(file, "rb") as f:
-                result = extract_data(data=f)
+                result = extract_data(file_data=f)
 
         byte_count, char_count, word_count, line_count = result
 
