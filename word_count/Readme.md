@@ -23,7 +23,7 @@ cli library tool used: [click](https://palletsprojects.com/p/click/)
 ### feature
 this tool provide the word count, line count, byte count and character count.
 
-command-line argument used for these above are
+command-line argument option used for these above are
 1. word count: `-w` or `--words`
 2. line count: `-l` or `--lines`
 3. character count: `-m` or `--characters`
@@ -31,8 +31,8 @@ command-line argument used for these above are
 
 ### How to use
 1. complete the setup
-2. run command `py_wc < -l | -m | -c | -w> <file1> <file2> <file2>` 
-3. with stdin `cat filename | py_wc <-l | -m | -c | -w>`
+2. run command `py_wc <option> <file1> <file2> <file2>`  
+3. with stdin `cat filename | py_wc  -<option>`
    
 Note : `py_wc` is named as command to run this project
 
