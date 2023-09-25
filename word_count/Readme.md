@@ -35,3 +35,6 @@ command-line argument used for these above are
 3. with stdin `cat filename | py_wc <-l | -m | -c | -w>`
    
 Note : `py_wc` is named as command to run this project
+
+### order of output
+order of output in the terminal is `line_count, word_count, byte_count, char_count`. ie for command `py_wc <file>` we show line_count, word_count, byte_count in output in this order.

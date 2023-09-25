@@ -47,7 +47,9 @@ def extract_data(file_data):
     help="The number of bytes in each input file is written to the standard output.  This will cancel out any prior usage of the -m option.",
 )
 def word_count(files, count_lines, count_words, count_characters, count_bytes):
-    if not (count_lines or count_words or count_bytes):
+    if count_characters:
+        pass
+    elif not (count_lines or count_words or count_bytes):
         count_bytes = count_lines = count_words = True
 
     if not files:
@@ -65,22 +67,12 @@ def word_count(files, count_lines, count_words, count_characters, count_bytes):
 
         byte_count, char_count, word_count, line_count = result
 
-        result = []
-
-        if count_lines:
-            result.append(line_count)
-        if count_words:
-            result.append(word_count)
-        if count_bytes:
-            result.append(byte_count)
-        if count_characters:
-            result.append(char_count)
-
-        result.append(filename if filename != "-" else "")
-
-        final_output = "\t".join(str(i) for i in result)
-
-        click.echo(final_output)
+        
+        if not (count_bytes or count_characters or count_lines or count_words):
+            result = f"{line_count}\t{word_count}\t{byte_count}\n"
+        else:
+            result = f"""{line_count if count_lines else ''}\t{word_count if count_words else ''}\t{byte_count if count_bytes else ''}\t{char_count if count_characters else ''}\t{filename}\n""".strip()
+        click.echo(result)
 
 
 if __name__ == "__main__":
