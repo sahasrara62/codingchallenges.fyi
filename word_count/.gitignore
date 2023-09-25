@@ -1,0 +1,5 @@
+venv
+venv/*
+__pycache__
+__pychahce__/**
+**.egg-info
