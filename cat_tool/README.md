@@ -20,12 +20,12 @@ After installing the package ie `cat_tool`
 run the test as
 
 ```
-py_cat tests/test.txt
-py_cat tests/test.txt -n
-py_cat tests/test.txt -n -b
-py_cat tests/test.txt tests/text2.txt
-cat tests/test.txt | py_cat -
-cat tests/test.txt | py_cat - -n
+py_cat tests_files/test.txt
+py_cat tests_files/test.txt -n
+py_cat tests_files/test.txt -n -b
+py_cat tests_files/test.txt tests_files/text2.txt
+cat tests_files/test.txt | py_cat -
+cat tests_files/test.txt | py_cat - -n
 ```
 
 ### using only script
