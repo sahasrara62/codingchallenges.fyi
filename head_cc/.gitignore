@@ -1,0 +1,7 @@
+venv/*
+.venv
+.idea
+*.egg-info
+dist
+dist/*
+.idea/*
